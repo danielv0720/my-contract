@@ -7,6 +7,7 @@ import {
 import { HomeScreen } from '../components/home/HomeScreen';
 import { Nabvar } from '../components/layout/Nabvar';
 import { QuestionsScreen } from '../components/questions/QuestionsScreen';
+import { UserScreen } from '../components/users/UserScreen';
 import { UsersScreen } from '../components/users/UsersScreen';
 
 export const AppRouter = () => {
@@ -21,6 +22,9 @@ export const AppRouter = () => {
             </Route>
             <Route path="/users">
               <UsersScreen />
+            </Route>
+            <Route path="/user/:userId">
+              <UserScreen />
             </Route>
             <Route path="/questions">
               <QuestionsScreen />

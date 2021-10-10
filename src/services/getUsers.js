@@ -1,6 +1,7 @@
-export const getUsers = async () => {
-  const url = `https://reqres.in/api/users?page=2`;
-  const users = await fetch(url);
+export const getUsers = async (userId) => {
+  const baseApiUrl = 'https://reqres.in/api/users'
+  const urlRequest = userId ? `${baseApiUrl}/${userId}` : baseApiUrl;
+  const users = await fetch(urlRequest);
   const { data } = await users.json();
-  return data
+  return data;
 }
