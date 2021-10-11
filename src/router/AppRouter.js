@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect
 } from "react-router-dom";
 import { HomeScreen } from '../components/home/HomeScreen';
 import { Nabvar } from '../components/layout/Nabvar';
@@ -28,6 +29,9 @@ export const AppRouter = () => {
             </Route>
             <Route path="/questions">
               <QuestionsScreen />
+            </Route>
+            <Route path="/">
+              <Redirect to="/home" />
             </Route>
           </Switch>
         </div>
