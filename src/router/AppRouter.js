@@ -2,6 +2,7 @@ import React from 'react'
 import {
   BrowserRouter as Router,
   Switch,
+  HashRouter,
   Route,
   Redirect
 } from "react-router-dom";
@@ -17,7 +18,7 @@ export const AppRouter = () => {
       <div>
       <Nabvar />
         <div className="container">
-          <Switch>
+          <HashRouter>
             <Route exact path="/home" component={HomeScreen}/>
 
             <Route exact path="/users" component={UsersScreen}/>
@@ -27,7 +28,7 @@ export const AppRouter = () => {
             <Route exact path="/questions" component={QuestionsScreen}/>
      
             <Redirect to="/home" />
-          </Switch>
+          </HashRouter>
         </div>
 
       </div>
