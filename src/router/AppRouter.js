@@ -18,21 +18,15 @@ export const AppRouter = () => {
       <Nabvar />
         <div className="container">
           <Switch>
-            <Route path="/home">
-              <HomeScreen />
-            </Route>
-            <Route path="/users">
-              <UsersScreen />
-            </Route>
-            <Route path="/user/:userId">
-              <UserScreen />
-            </Route>
-            <Route path="/questions">
-              <QuestionsScreen />
-            </Route>
-            <Route path="/">
-              <Redirect to="/home" />
-            </Route>
+            <Route exact path="/home" component={HomeScreen}/>
+
+            <Route exact path="/users" component={UsersScreen}/>
+    
+            <Route exact path="/user/:userId" component={UserScreen}/>
+  
+            <Route exact path="/questions" component={QuestionsScreen}/>
+     
+            <Redirect to="/home" />
           </Switch>
         </div>
 
